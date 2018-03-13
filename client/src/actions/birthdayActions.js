@@ -3,7 +3,9 @@ import endpoints from './endpoints' 
 
 export const REQUEST_BIRTHDAYS = 'REQUEST_BIRTHDAYS'
 export const RECEIVE_BIRTHDAYS = 'RECEIVE_BIRTHDAYS'
- 
+export const POST_BIRTHDAY = 'POST_BIRTHDAY'
+export const BIRTHDAY_SAVED = 'BIRTHDAY_SAVED'
+
 function requestBirthdays() {
   return {
     type: REQUEST_BIRTHDAYS
@@ -15,6 +17,19 @@ function receiveBirthdays(json) {
     type: RECEIVE_BIRTHDAYS,
     birthdays: json,
     receivedAt: Date.now()
+  }
+}
+
+function postBirthday() {
+  return {
+    type: POST_BIRTHDAY
+  }
+}
+
+function birthdaySaved(json) {
+  return {
+    type: BIRTHDAY_SAVED,
+    birthday: json
   }
 }
  
@@ -41,5 +56,11 @@ export function fetchBirthdaysIfNeeded() {
     if (shouldFetchBirthdays(getState())) {
       return dispatch(fetchBirthdays())
     }
+  }
+}
+
+export function addBirthday() {
+  return (dispatch) => {
+
   }
 }

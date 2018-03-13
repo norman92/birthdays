@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fetchBirthdaysIfNeeded } from './../actions/birthdayActions'
 import BirthdayList from './../components/birthdaysList'
+import AddBirthdayForm from './../components/addBirthdayForm'
 
 class Birthdays extends Component {
  
@@ -11,6 +12,10 @@ class Birthdays extends Component {
     dispatch(fetchBirthdaysIfNeeded())
   }
    
+  addBirthday(values) {
+    console.log(values);
+  }
+
   render() {
     const { birthdays, isFetching, lastUpdated } = this.props
     return (
@@ -28,6 +33,9 @@ class Birthdays extends Component {
           <div style={{ opacity: isFetching ? 0.5 : 1 }}>
             <BirthdayList birthdays={birthdays} />
           </div>}
+
+          <h2>Add birthday</h2>
+          <AddBirthdayForm onSubmit={this.addBirthday} />
       </div>
     )
   }
