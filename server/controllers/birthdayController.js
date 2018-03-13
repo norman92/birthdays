@@ -24,5 +24,5 @@ exports.addBirthday = function(req, res) {
 };
   
 exports.deleteBirthday = function(req, res) {
-    res.json({ message: 'Task successfully deleted' })
+    res.json({ message: 'Birthday successfully deleted' })
 };

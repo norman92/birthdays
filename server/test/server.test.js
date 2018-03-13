@@ -5,6 +5,7 @@ const app = require('./../server')
 
 describe('API Tests', function() {
   var birthday = {
+    id: 1,
     date: Date('1991-07-01T00:00:00'),
     name: 'Jane Doe'
   }
@@ -34,4 +35,16 @@ describe('API Tests', function() {
     })
   })
 
+  describe('Delete birthday /birthdays', () => {
+    it('should delete a birthday', (done) => {
+      request(app)
+        .delete('/birthdays/' + birthday.id)
+        .send(birthday)
+        .expect(200)
+        .expect((res) => {
+          expect(res.body.message).toEqual('Birthday successfully deleted')
+        })
+        .end(done)
+    })
+  })
 })
