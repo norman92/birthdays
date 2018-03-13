@@ -7,7 +7,7 @@ function birthdays(
   state = {
     isFetching: false,
     didInvalidate: false,
-    items: []
+    birthdays: []
   },
   action
 ) {
@@ -21,7 +21,7 @@ function birthdays(
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
-        items: action.birthdays,
+        birthdays: action.birthdays,
         lastUpdated: action.receivedAt
       })
     default:

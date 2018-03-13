@@ -29,12 +29,10 @@ function fetchBirthdays() {
  
 function shouldFetchBirthdays(state) {
   const birthdays = state.birthdays
-  if (!birthdays) {
+  if ((!birthdays || !birthdays.length) && !birthdays.isFetching) {
     return true
-  } else if (birthdays.isFetching) {
+  } else  {
     return false
-  } else {
-    return birthdays.didInvalidate
   }
 }
  
