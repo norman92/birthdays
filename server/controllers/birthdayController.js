@@ -14,14 +14,15 @@ var birthdays = [
 
 
 exports.allBirthdays = function(req, res) {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(birthdays));
+    res.setHeader('Content-Type', 'application/json')
+    res.send(JSON.stringify(birthdays))
 };
   
 exports.addBirthday = function(req, res) {
-    return req.body;
+    res.setHeader('Content-Type', 'application/json')
+    res.send(JSON.stringify(req.body))
 };
   
 exports.deleteBirthday = function(req, res) {
-    res.json({ message: 'Task successfully deleted' });
+    res.json({ message: 'Task successfully deleted' })
 };
