@@ -1,4 +1,4 @@
-const base = "http://localhost:3000/";
+const base = "http://localhost:3001/";
 
 const endpoints = {
     birthdays: base + 'birthdays'
