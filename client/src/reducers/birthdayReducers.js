@@ -1,6 +1,6 @@
 import {
-  REQUEST_POSTS,
-  RECEIVE_POSTS
+  REQUEST_BIRTHDAYS,
+  RECEIVE_BIRTHDAYS
 } from './../actions/birthdayActions'
  
 function birthdays(
