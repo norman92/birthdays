@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faBirthdayCake from '@fortawesome/fontawesome-free-solid/faBirthdayCake'
-import './App.css';
+import './../styles/app.css';
 
 class App extends Component {
   render() {
