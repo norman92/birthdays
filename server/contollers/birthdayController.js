@@ -1,16 +1,11 @@
-exports.list_all_tasks = function(req, res) {
+exports.allBirthdays = function(req, res) {
     return [];
-  };
+};
   
-  exports.create_a_task = function(req, res) {
-      return req.body;
-  };
+exports.addBirthday = function(req, res) {
+    return req.body;
+};
   
-  exports.update_a_task = function(req, res) {
-      return req.body;
-  };
-    
-    
-  exports.delete_a_task = function(req, res) {
-        res.json({ message: 'Task successfully deleted' });
-  };  
+exports.deleteBirthday = function(req, res) {
+    res.json({ message: 'Task successfully deleted' });
+};
