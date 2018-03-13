@@ -1,5 +1,5 @@
 module.exports = function(app) {
-    var birthdays = require('../controllers/birthdaysController');
+    var birthdays = require('../controllers/birthdayController');
   
     // Birthday Routes
     app.route('/birthdays')
