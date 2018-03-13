@@ -6,13 +6,13 @@ import NextBirthday from './nextBirthday'
 export default class BirthdayList extends Component {
   render() {
     return (
-      <ul>
+      <div>
         {this.props.birthdays.map((birthday, i) => 
-            <li key={i}>{birthday.name}. 
+            <p key={i}>{birthday.name}. 
                 Age: <Date date={birthday.date} />. 
                 Next birthday  <NextBirthday date={birthday.date} />
-            </li>)}
-      </ul>
+            </p>)}
+      </div>
     )
   }
 }
