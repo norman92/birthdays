@@ -4,7 +4,7 @@ import moment from  'moment'
 
 export default class Date extends Component {
     render() {
-    var date = moment(this.props.date).fromNow(); 
+    var date = moment(this.props.date).fromNow(true); 
     return (
         <span>{date}</span>
     )
