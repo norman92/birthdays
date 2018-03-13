@@ -1,4 +1,4 @@
-import fetch from 'cross-fetch'
+import axios from 'axios'
 import endpoints from './endpoints' 
 
 export const REQUEST_BIRTHDAYS = 'REQUEST_BIRTHDAYS'
@@ -59,8 +59,12 @@ export function fetchBirthdaysIfNeeded() {
   }
 }
 
-export function addBirthday() {
+export function addBirthday(birthday) {
   return (dispatch) => {
+    dispatch(postBirthday())
+    return axios.get(endpoints.birthdays)
+      .then(response => response.json())
+      .then(json => dispatch(receiveBirthdays(json)))
 
   }
 }
