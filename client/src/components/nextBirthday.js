@@ -4,11 +4,23 @@ import moment from  'moment'
 
 export default class NextBirthday extends Component {
     render() {
-        console.log(this.props.date)
     var date = moment(this.props.date)
-    var next = date.fromNow(); 
+    var currentYear = moment().year()
+    console.log(currentYear)
+    console.log(date.month())
+    console.log(date.date())
+    var next = moment([currentYear, date.month(), date.date()])
+
+    if (next.isBefore(moment()))
+    {
+      next.add(1, 'y')
+    }
+
+    console.log(date.format());
+    console.log(next.format());
+
     return (
-      <span>{next}</span>
+      <span>{next.fromNow()}</span>
     )
   }
 }
