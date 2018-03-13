@@ -23,7 +23,7 @@ function fetchBirthdays() {
     dispatch(requestBirthdays())
     return fetch(endpoints.birthdays)
       .then(response => response.json())
-      .then(json => dispatch(requestBirthdays(json)))
+      .then(json => dispatch(receiveBirthdays(json)))
   }
 }
  
