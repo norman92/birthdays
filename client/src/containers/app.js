@@ -11,8 +11,10 @@ class App extends Component {
         <header className="App-header">
           <FontAwesomeIcon icon={faBirthdayCake} size="6x" />
           <h1 className="App-title">Birthdays</h1>
-          <Birthdays />
         </header>
+        <section id="birthdays">
+          <Birthdays />
+        </section>
       </div>
     );
   }

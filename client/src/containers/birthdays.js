@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { fetchBirthdaysIfNeeded } from '../actions/birthdayActions'
- 
+import { fetchBirthdaysIfNeeded } from './../actions/birthdayActions'
+import BirthdayList from './../components/birthdaysList'
+
 class Birthdays extends Component {
  
   componentDidMount() {
@@ -25,7 +26,7 @@ class Birthdays extends Component {
         {!isFetching && birthdays.length === 0 && <h2>Add your first birthday!</h2>}
         {birthdays.length > 0 &&
           <div style={{ opacity: isFetching ? 0.5 : 1 }}>
-            {/* <BirthdayList posts={birthdays} /> */}
+            <BirthdayList birthdays={birthdays} />
           </div>}
       </div>
     )
