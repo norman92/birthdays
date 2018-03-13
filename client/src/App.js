@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faBirthdayCake from '@fortawesome/fontawesome-free-solid/faBirthdayCake'
 import './App.css';
 
 class App extends Component {
@@ -7,12 +8,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <FontAwesomeIcon icon={faBirthdayCake} size="6x" />
           <h1 className="App-title">Birthdays</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
