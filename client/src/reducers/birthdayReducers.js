@@ -12,12 +12,12 @@ function birthdays(
   action
 ) {
   switch (action.type) {
-    case REQUEST_POSTS:
+    case REQUEST_BIRTHDAYS:
       return Object.assign({}, state, {
         isFetching: true,
         didInvalidate: false
       })
-    case RECEIVE_POSTS:
+    case RECEIVE_BIRTHDAYS:
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
