@@ -1,19 +1,25 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { fetchBirthdaysIfNeeded } from './../actions/birthdayActions'
+import { fetchBirthdaysIfNeeded, addBirthday } from './../actions/birthdayActions'
 import BirthdayList from './../components/birthdaysList'
 import AddBirthdayForm from './../components/addBirthdayForm'
 
 class Birthdays extends Component {
- 
+  constructor(props) {
+    super(props)
+
+    this.addBirthday = this.addBirthday.bind(this)
+  } 
+
   componentDidMount() {
     const { dispatch } = this.props
     dispatch(fetchBirthdaysIfNeeded())
   }
    
   addBirthday(values) {
-    console.log(values);
+    const { dispatch } = this.props
+    dispatch(addBirthday(values))
   }
 
   render() {
