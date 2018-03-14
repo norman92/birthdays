@@ -12,7 +12,7 @@
 
 ### Front End
 
-#### Boilder Plate
+#### Boiler Plate
 
 I used create-react-app to start off. This enabled me to get going without configuring WebPack.  I was able to launch straight into building the app itself.
 
