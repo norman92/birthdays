@@ -62,8 +62,8 @@ export function addBirthday(birthday) {
   return (dispatch) => {
     dispatch(postBirthday())
     return fetch(endpoints.birthdays, {
-      method: 'post',
-      body: JSON.stringify(birthday)
+      method: "POST",
+      body: birthday
     }).then(response => response.json())
       .then(json => dispatch(birthdaySaved(json)))
   }

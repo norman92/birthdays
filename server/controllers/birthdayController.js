@@ -19,6 +19,7 @@ exports.allBirthdays = function(req, res) {
 };
   
 exports.addBirthday = function(req, res) {
+    console.log(req.body)
     res.setHeader('Content-Type', 'application/json')
     res.send(JSON.stringify(req.body))
 };
